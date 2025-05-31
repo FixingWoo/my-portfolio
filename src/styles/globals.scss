@@ -1,0 +1,21 @@
+:root {
+  --mask-position-x: 50%;
+  --mask-position-y: 0%;
+  --mask-radius: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
