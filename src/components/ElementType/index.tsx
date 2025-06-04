@@ -27,7 +27,7 @@ const ElementType = forwardRef<HTMLElement, IProps>(
             rel="noreferrer"
             className={className}
             style={style}
-            onClick={() => onClick?.()}
+            onClick={onClick}
             {...props}
           >
             {children}
@@ -41,7 +41,7 @@ const ElementType = forwardRef<HTMLElement, IProps>(
           href={href}
           className={className}
           style={style}
-          onClick={() => onClick?.()}
+          onClick={onClick}
           {...props}
         >
           {children}
