@@ -11,4 +11,11 @@ const style = {
   scaling: '100', // 90 | 95 | 100 | 105 | 110
 };
 
-export { style };
+const routes = {
+  '/': true,
+  '/about': true,
+  '/work': true,
+  '/blog': true,
+};
+
+export { style, routes };
