@@ -1,0 +1,41 @@
+:root {
+  --static-space-0: 0;
+  --static-space-16: 1rem;
+  --static-space-20: 1.25rem;
+  --static-space-24: 1.5rem;
+  --static-space-32: 2rem;
+  --static-space-40: 2.5rem;
+  --static-space-48: 3rem;
+  --static-space-56: 3.5rem;
+  --static-space-64: 4rem;
+  --static-space-80: 5rem;
+  --static-space-104: 6.5rem;
+  --static-space-128: 8rem;
+  --static-space-160: 10rem;
+
+  --responsive-space-xl: var(--static-space-80);
+  --responsive-space-l: var(--static-space-40);
+  --responsive-space-m: var(--static-space-24);
+  --responsive-space-s: var(--static-space-16);
+  --responsive-space-xs: var(--static-space-12);
+}
+
+@media (--m) {
+  :root {
+    --responsive-space-xl: var(--static-space-64);
+    --responsive-space-l: var(--static-space-24);
+    --responsive-space-m: var(--static-space-16);
+    --responsive-space-s: var(--static-space-12);
+    --responsive-space-xs: var(--static-space-8);
+  }
+}
+
+@media (--s) {
+  :root {
+    --responsive-space-xl: var(--static-space-40);
+    --responsive-space-l: var(--static-space-16);
+    --responsive-space-m: var(--static-space-12);
+    --responsive-space-s: var(--static-space-8);
+    --responsive-space-xs: var(--static-space-4);
+  }
+}
