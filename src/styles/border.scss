@@ -1,0 +1,51 @@
+/****************************/
+/*           RADIUS         */
+/****************************/
+
+.radius-none {
+  border-radius: none;
+}
+
+.radius-xl {
+  border-radius: var(--radius-xl);
+}
+
+.radius-l {
+  border-radius: var(--radius-l);
+}
+
+.radius-m {
+  border-radius: var(--radius-m);
+}
+
+.radius-m-4 {
+  border-radius: var(--radius-m-nest-4);
+}
+
+.radius-s {
+  border-radius: var(--radius-s);
+}
+
+.radius-xs {
+  border-radius: var(--radius-xs);
+}
+
+/****************************/
+/*           STYLE          */
+/****************************/
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-1 {
+  border-width: 1px;
+}
+
+/****************************/
+/*           COLOR          */
+/****************************/
+
+.neutral-border-alpha-medium {
+  border-color: var(--neutral-alpha-medium);
+}

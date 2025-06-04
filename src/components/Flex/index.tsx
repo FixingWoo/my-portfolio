@@ -6,21 +6,33 @@ import cn from 'classnames';
 import { SIZES, T_SHIRT_SIZES } from '@/constants';
 
 interface ComponentProps
-  extends CommonProps,
-    ConditionalProps,
-    FlexProps,
-    DisplayProps,
+  extends FlexProps,
     SpacingProps,
-    SizeProps {}
+    SizeProps,
+    StyleProps,
+    CommonProps,
+    DisplayProps,
+    ConditionalProps {}
 
 const Flex = forwardRef<HTMLDivElement, ComponentProps>(
   (
     {
       as: Component = 'div',
+      inline,
+      background,
+      border,
+      borderTop,
+      borderRight,
+      borderBottom,
+      borderLeft,
+      borderStyle,
+      borderWidth,
+      radius,
       direction,
       flex,
+      horizontal,
+      vertical,
       center,
-      inline,
       padding,
       paddingLeft,
       paddingRight,
@@ -59,16 +71,72 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       overflowY,
       zIndex,
       className,
+      shadow,
+      solid,
+      gap,
       style,
       children,
       ...rest
     },
     ref
   ) => {
+    const generateDynamicClass = (type: string, value: string | undefined) => {
+      if (!value) return undefined;
+
+      if (value === 'transparent') {
+        return `transparent-border`;
+      }
+
+      if (['surface', 'page', 'overlay'].includes(value)) {
+        return `${value}-${type}`;
+      }
+
+      const parts = value.split('-');
+      if (parts.includes('alpha')) {
+        const [scheme, , weight] = parts;
+        return `${scheme}-${type}-alpha-${weight}`;
+      }
+
+      const [scheme, weight] = value.split('-') as [ColorScheme, ColorWeight];
+      return `${scheme}-${type}-${weight}`;
+    };
+
     const classes = cn(
       inline ? 'inline-flex' : 'flex',
+      generateDynamicClass('background', background),
+      generateDynamicClass('solid', solid),
+      generateDynamicClass(
+        'border',
+        border || borderTop || borderRight || borderBottom || borderLeft
+      ),
+      (border || borderTop || borderRight || borderBottom || borderLeft) &&
+        !borderStyle &&
+        'border-solid',
+      border && !borderWidth && 'border-1',
+      (borderTop || borderRight || borderBottom || borderLeft) &&
+        'border-reset',
+      border && !borderWidth && 'border-1',
+      borderTop && 'border-top-1',
+      borderRight && 'border-right-1',
+      borderBottom && 'border-bottom-1',
+      borderLeft && 'border-left-1',
+      borderWidth && `border-${borderWidth}`,
+      borderStyle && `border-${borderStyle}`,
+      radius === 'full' ? 'radius-full' : radius && `radius-${radius}`,
       direction && `flex-${direction}`,
       flex && `flex-${flex}`,
+      horizontal &&
+        (direction === 'row' ||
+        direction === 'row-reverse' ||
+        direction === undefined
+          ? `justify-${horizontal}`
+          : `align-${horizontal}`),
+      vertical &&
+        (direction === 'row' ||
+        direction === 'row-reverse' ||
+        direction === undefined
+          ? `align-${vertical}`
+          : `justify-${vertical}`),
       center && 'center',
       padding && `p-${padding}`,
       paddingLeft && `pl-${paddingLeft}`,
@@ -111,6 +179,8 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       overflowX && `overflow-x-${overflowX}`,
       overflowY && `overflow-y-${overflowY}`,
       zIndex && `z-index-${zIndex}`,
+      shadow && `shadow-${shadow}`,
+      gap && `g-${gap}`,
       className
     );
 

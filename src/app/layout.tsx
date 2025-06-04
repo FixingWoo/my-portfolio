@@ -2,20 +2,11 @@ import '@/styles/index.scss';
 import '@/tokens/index.scss';
 
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 
 import Header from '@/components/Header';
 import Flex from '@/components/Flex';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+import { style } from '@/resources/config';
 
 export const metadata: Metadata = {
   title: 'Jungwu Portfolio',
@@ -28,12 +19,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="relative flex flex-column min-width-0 fill-width p-0 m-0">
+    <Flex
+      as="html"
+      data-neutral={style.neutral}
+      data-brand={style.brand}
+      data-accent={style.accent}
+      data-solid={style.solid}
+      data-solid-style={style.solidStyle}
+      data-border={style.border}
+      data-surface={style.surface}
+      data-transition={style.transition}
+    >
+      <body
+        className="relative flex flex-column min-width-0 fill-width p-0 m-0"
+        data-theme="light"
+      >
         <Flex fillWidth minHeight={'16'} hide="s" />
         <Header />
         {children}
       </body>
-    </html>
+    </Flex>
   );
 }

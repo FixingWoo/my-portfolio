@@ -79,3 +79,49 @@ interface SizeProps extends HTMLAttributes<HTMLDivElement> {
   fillWidth?: boolean;
   fillHeight?: boolean;
 }
+
+interface StyleProps extends HTMLAttributes<HTMLDivElement> {
+  background?:
+    | `${ColorScheme}-${ColorWeight}`
+    | `${ColorScheme}-alpha-${ColorWeight}`
+    | 'surface'
+    | 'transparent';
+  solid?: `${ColorScheme}-${ColorWeight}`;
+  borderTop?:
+    | `${ColorScheme}-${ColorWeight}`
+    | `${ColorScheme}-alpha-${ColorWeight}`
+    | 'surface'
+    | 'transparent';
+  borderRight?:
+    | `${ColorScheme}-${ColorWeight}`
+    | `${ColorScheme}-alpha-${ColorWeight}`
+    | 'surface'
+    | 'transparent';
+  borderBottom?:
+    | `${ColorScheme}-${ColorWeight}`
+    | `${ColorScheme}-alpha-${ColorWeight}`
+    | 'surface'
+    | 'transparent';
+  borderLeft?:
+    | `${ColorScheme}-${ColorWeight}`
+    | `${ColorScheme}-alpha-${ColorWeight}`
+    | 'surface'
+    | 'transparent';
+  border?:
+    | `${ColorScheme}-${ColorWeight}`
+    | `${ColorScheme}-alpha-${ColorWeight}`
+    | 'surface'
+    | 'transparent';
+  borderStyle?: 'solid';
+  borderWidth?: 1 | 2;
+  topRadius?: RadiusSize;
+  rightRadius?: RadiusSize;
+  bottomRadius?: RadiusSize;
+  leftRadius?: RadiusSize;
+  topLeftRadius?: RadiusSize;
+  topRightRadius?: RadiusSize;
+  bottomLeftRadius?: RadiusSize;
+  bottomRightRadius?: RadiusSize;
+  radius?: RadiusSize | `${RadiusSize}-${RadiusNest}`;
+  shadow?: ShadowSize;
+}

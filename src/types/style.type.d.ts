@@ -22,4 +22,14 @@ type TShirtSizes = 'xs' | 's' | 'm' | 'l' | 'xl';
 
 type ResponsiveSpacingToken = TShirtSizes;
 
+type ShadowSize = TShirtSizes;
+
 type SpacingToken = StaticSpacingToken | ResponsiveSpacingToken;
+
+type RadiusSize = TShirtSizes | 'full';
+
+type RadiusNest = '4' | '8';
+
+type ColorScheme = 'neutral';
+
+type ColorWeight = 'medium';
