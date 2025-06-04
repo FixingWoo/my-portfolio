@@ -4,6 +4,11 @@ interface CommonProps extends HTMLAttributes<HTMLDivElement> {
   style?: React.CSSProperties;
 }
 
+interface ConditionalProps extends HTMLAttributes<HTMLDivElement> {
+  hide?: 's' | 'm' | 'l';
+  show?: 's' | 'm' | 'l';
+}
+
 interface DisplayProps extends HTMLAttributes<HTMLDivElement> {
   as?: ElementType;
   inline?: boolean;
