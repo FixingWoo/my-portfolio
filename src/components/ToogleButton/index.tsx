@@ -2,11 +2,13 @@
 
 import { forwardRef, ReactNode } from 'react';
 import cn from 'classnames';
+import styles from './style.module.scss';
 
 import ElementType from '../ElementType';
 import Flex from '../Flex';
+import Icon from '../Icon';
 
-import styles from './style.module.scss';
+import { IconName } from '../../resources/icon';
 
 interface IProps {
   href?: string;
@@ -70,7 +72,7 @@ const ToggleButton = forwardRef<HTMLElement, IProps>(
         {...props}
       >
         {prefixIcon && (
-          // <Icon name={prefixIcon} size={size === 'l' ? 's' : 'xs'} />
+          <Icon name={prefixIcon} size={size === 'l' ? 's' : 'xs'} />
         )}
         <Flex horizontal={justifyContent} position="static">
           {label || children}

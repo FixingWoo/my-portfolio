@@ -41,14 +41,14 @@ const Header = () => {
               <>
                 <ToggleButton
                   className="s-flex-hide"
-                  // prefixIcon="person"
+                  prefixIcon="person"
                   href="/about"
                   label="About"
                   selected={pathname === '/about'}
                 />
                 <ToggleButton
                   className="s-flex-show"
-                  // prefixIcon="person"
+                  prefixIcon="person"
                   href="/about"
                   selected={pathname === '/about'}
                 />
@@ -58,14 +58,14 @@ const Header = () => {
               <>
                 <ToggleButton
                   className="s-flex-hide"
-                  // prefixIcon="grid"
+                  prefixIcon="grid"
                   href="/work"
                   label={'Work'}
                   selected={pathname.startsWith('/work')}
                 />
                 <ToggleButton
                   className="s-flex-show"
-                  // prefixIcon="grid"
+                  prefixIcon="grid"
                   href="/work"
                   selected={pathname.startsWith('/work')}
                 />
@@ -75,14 +75,14 @@ const Header = () => {
               <>
                 <ToggleButton
                   className="s-flex-hide"
-                  // prefixIcon="book"
+                  prefixIcon="book"
                   href="/blog"
                   label={'Blog'}
                   selected={pathname.startsWith('/blog')}
                 />
                 <ToggleButton
                   className="s-flex-show"
-                  // prefixIcon="book"
+                  prefixIcon="book"
                   href="/blog"
                   selected={pathname.startsWith('/blog')}
                 />
