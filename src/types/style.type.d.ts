@@ -32,7 +32,7 @@ type RadiusNest = '4' | '8';
 
 type ColorScheme = 'neutral';
 
-type ColorWeight = 'medium';
+type ColorWeight = 'weak' | 'medium' | 'strong';
 
 type TextSize = TShirtSizes;
 

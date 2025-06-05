@@ -1,6 +1,7 @@
 import Column from '@/components/Column';
 import Flex from '@/components/Flex';
 import Heading from '@/components/Heading';
+import Text from '@/components/Text';
 
 import styles from './style.module.scss';
 
@@ -20,6 +21,13 @@ export default function About() {
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
+            <Text
+              className={styles.textAlign}
+              variant="display-default-xs"
+              onBackground="neutral-weak"
+            >
+              {person.role}
+            </Text>
           </Column>
         </Column>
       </Flex>

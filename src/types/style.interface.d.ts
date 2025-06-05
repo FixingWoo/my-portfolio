@@ -2,6 +2,7 @@ interface CommonProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: ReactNode;
   style?: React.CSSProperties;
+  onBackground?: `${ColorScheme}-${ColorWeight}`;
   align?: CSSProperties['textAlign'];
 }
 

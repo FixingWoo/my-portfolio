@@ -10,9 +10,10 @@ type IProps<T extends ElementType> = TextProps<T> &
   SpacingProps &
   ComponentPropsWithoutRef<T>;
 
-const Heading = <T extends ElementType = 'h1'>({
+const Text = <T extends ElementType = 'span'>({
   as,
   align,
+  onBackground,
   variant,
   wrap = 'balance',
   size,
@@ -36,18 +37,30 @@ const Heading = <T extends ElementType = 'h1'>({
   className,
   ...props
 }: IProps<T>) => {
-  const Component = as || 'h1';
+  const Component = as || 'span';
 
-  const sizeClass = size ? `font-${size}` : 'font-m';
-  const weightClass = weight ? `font-${weight}` : 'font-strong';
+  const sizeClass = size ? `font-${size}` : '';
+  const weightClass = weight ? `font-${weight}` : '';
 
   const classes = variant
     ? getVariantClasses(variant)
     : [sizeClass, weightClass];
 
+  let colorClass = '';
+
+  if (onBackground) {
+    const [scheme, weight] = onBackground.split('-') as [
+      ColorScheme,
+      ColorWeight
+    ];
+
+    colorClass = `${scheme}-on-background-${weight}`;
+  }
+
   const combinedClasses = cn(
     ...classes,
     className,
+    colorClass,
     generateClassName('p', padding),
     generateClassName('pl', paddingLeft),
     generateClassName('pr', paddingRight),
@@ -79,6 +92,6 @@ const Heading = <T extends ElementType = 'h1'>({
   );
 };
 
-Heading.displayName = 'Heading';
+Text.displayName = 'Text';
 
-export default Heading;
+export default Text;
