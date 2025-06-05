@@ -4,6 +4,7 @@ import { CSSProperties, forwardRef } from 'react';
 import cn from 'classnames';
 
 import { SIZES, T_SHIRT_SIZES } from '@/constants';
+import { getVariantClasses } from '@/utils';
 
 interface ComponentProps
   extends FlexProps,
@@ -18,6 +19,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
   (
     {
       as: Component = 'div',
+      mobileDirection,
       textVariant,
       inline,
       background,
@@ -81,11 +83,6 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
     },
     ref
   ) => {
-    const getVariantClasses = (variant: TextVariant) => {
-      const [type, weight, size] = variant.split('-');
-      return [`font-${type}`, `font-${weight}`, `font-${size}`];
-    };
-
     const variantClasses = textVariant ? getVariantClasses(textVariant) : '';
     const generateDynamicClass = (type: string, value: string | undefined) => {
       if (!value) return undefined;
@@ -109,6 +106,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
     };
 
     const classes = cn(
+      mobileDirection && `s-flex-${mobileDirection}`,
       inline ? 'inline-flex' : 'flex',
       generateDynamicClass('background', background),
       generateDynamicClass('solid', solid),

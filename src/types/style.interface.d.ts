@@ -2,6 +2,7 @@ interface CommonProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: ReactNode;
   style?: React.CSSProperties;
+  align?: CSSProperties['textAlign'];
 }
 
 interface ConditionalProps extends HTMLAttributes<HTMLDivElement> {
@@ -22,6 +23,7 @@ interface DisplayProps extends HTMLAttributes<HTMLDivElement> {
 
 interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
+  mobileDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   horizontal?:
     | 'start'
     | 'center'
@@ -41,6 +43,14 @@ interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   center?: boolean;
   wrap?: boolean;
   flex?: flex;
+}
+
+interface TextProps<T extends ElementType = 'span'> extends HTMLAttributes<T> {
+  as?: T;
+  variant?: TextVariant;
+  wrap?: CSSProperties['textWrap'];
+  size?: TextSize;
+  weight?: TextWeight;
 }
 
 interface SpacingProps extends HTMLAttributes<HTMLDivElement> {
