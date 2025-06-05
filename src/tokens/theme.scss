@@ -26,6 +26,11 @@
   --backdrop-filter: none;
   --surface-border: var(--static-transparent);
   --surface-background: var(--neutral-background-medium);
+
+  /* MASK */
+  --mask-position-x: 50%;
+  --mask-position-y: 0%;
+  --mask-radius: 100vh;
 }
 
 [data-theme='light'] {

@@ -1,5 +1,6 @@
 import '@/styles/index.scss';
 import '@/tokens/index.scss';
+import styles from './style.module.scss';
 
 import type { Metadata } from 'next';
 
@@ -34,6 +35,9 @@ export default function RootLayout({
         className="relative flex flex-column min-width-0 fill-width p-0 m-0"
         data-theme="light"
       >
+        <div className={styles.mask}>
+          <div className={styles.background}></div>
+        </div>
         <Flex fillWidth minHeight={'16'} hide="s" />
         <Header />
         {children}
