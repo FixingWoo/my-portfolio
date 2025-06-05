@@ -40,7 +40,18 @@ export default function RootLayout({
         </div>
         <Flex fillWidth minHeight={'16'} hide="s" />
         <Header />
-        {children}
+        <Flex
+          zIndex={0}
+          flex={1}
+          fillWidth
+          paddingX="l"
+          paddingY="l"
+          horizontal="center"
+        >
+          <Flex fillWidth minHeight={0} horizontal="center">
+            {children}
+          </Flex>
+        </Flex>
       </body>
     </Flex>
   );
