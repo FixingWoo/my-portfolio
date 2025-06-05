@@ -18,6 +18,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
   (
     {
       as: Component = 'div',
+      textVariant,
       inline,
       background,
       border,
@@ -80,6 +81,12 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
     },
     ref
   ) => {
+    const getVariantClasses = (variant: TextVariant) => {
+      const [type, weight, size] = variant.split('-');
+      return [`font-${type}`, `font-${weight}`, `font-${size}`];
+    };
+
+    const variantClasses = textVariant ? getVariantClasses(textVariant) : '';
     const generateDynamicClass = (type: string, value: string | undefined) => {
       if (!value) return undefined;
 
@@ -181,7 +188,8 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       zIndex && `z-index-${zIndex}`,
       shadow && `shadow-${shadow}`,
       gap && `g-${gap}`,
-      className
+      className,
+      ...variantClasses
     );
 
     const parseSize = (

@@ -33,3 +33,11 @@ type RadiusNest = '4' | '8';
 type ColorScheme = 'neutral';
 
 type ColorWeight = 'medium';
+
+type TextSize = TShirtSizes;
+
+type TextVariant = `${TextType}-${TextWeight}-${TextSize}`;
+
+type TextType = 'body' | 'heading' | 'display' | 'label';
+
+type TextWeight = 'default' | 'strong';

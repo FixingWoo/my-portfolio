@@ -124,4 +124,8 @@ interface StyleProps extends HTMLAttributes<HTMLDivElement> {
   bottomRightRadius?: RadiusSize;
   radius?: RadiusSize | `${RadiusSize}-${RadiusNest}`;
   shadow?: ShadowSize;
+  textVariant?: TextVariant;
+  textSize?: TextSize;
+  textType?: TextType;
+  textWeight?: TextWeight;
 }

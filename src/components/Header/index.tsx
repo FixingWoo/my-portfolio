@@ -23,7 +23,12 @@ const Header = () => {
       horizontal="center"
       data-border="rounded"
     >
-      <Flex fillWidth vertical="center" paddingLeft="12">
+      <Flex
+        fillWidth
+        vertical="center"
+        paddingLeft="12"
+        textVariant="body-default-s"
+      >
         <Flex hide="s">ddd</Flex>
       </Flex>
       <Flex fillWidth horizontal="center">
@@ -36,7 +41,7 @@ const Header = () => {
           horizontal="center"
           zIndex={1}
         >
-          <Flex gap="4" vertical="center">
+          <Flex gap="4" vertical="center" textVariant="body-default-s">
             {routes['/about'] && (
               <>
                 <ToggleButton
@@ -91,7 +96,13 @@ const Header = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex fillWidth horizontal="end" vertical="center" paddingRight="12">
+      <Flex
+        fillWidth
+        horizontal="end"
+        vertical="center"
+        paddingRight="12"
+        textVariant="body-default-s"
+      >
         <Flex hide="s">
           <TimeDisplay timeZone="Asia/Seoul" />
         </Flex>
