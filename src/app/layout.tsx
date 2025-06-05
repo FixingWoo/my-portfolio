@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Flex from '@/components/Flex';
 
-import { style } from '@/resources/config';
+import { style } from '@/resources';
 
 export const metadata: Metadata = {
   title: 'Jungwu Portfolio',

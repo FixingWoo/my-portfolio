@@ -6,7 +6,7 @@ import Flex from '../Flex';
 import TimeDisplay from '../TimeDisplay';
 import ToggleButton from '../ToogleButton';
 
-import { routes } from '@/resources/config';
+import { routes, person } from '@/resources';
 
 const Header = () => {
   const pathname = usePathname() ?? '';
@@ -29,7 +29,7 @@ const Header = () => {
         paddingLeft="12"
         textVariant="body-default-s"
       >
-        <Flex hide="s">ddd</Flex>
+        <Flex hide="s">{person.location}</Flex>
       </Flex>
       <Flex fillWidth horizontal="center">
         <Flex
