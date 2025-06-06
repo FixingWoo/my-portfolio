@@ -8,7 +8,7 @@ import Text from '@/components/Text';
 
 import styles from './style.module.scss';
 
-import { person, social } from '@/resources';
+import { person, social, about } from '@/resources';
 
 export default function About() {
   return (
@@ -56,6 +56,15 @@ export default function About() {
                   )
               )}
             </Flex>
+          </Column>
+
+          <Column
+            textVariant="body-default-l"
+            fillWidth
+            gap="m"
+            marginBottom="xl"
+          >
+            {about.intro.description}
           </Column>
         </Column>
       </Flex>
