@@ -21,6 +21,8 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       as: Component = 'div',
       mobileDirection,
       textVariant,
+      textSize,
+      textWeight,
       inline,
       background,
       border,
@@ -83,7 +85,12 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
     },
     ref
   ) => {
-    const variantClasses = textVariant ? getVariantClasses(textVariant) : '';
+    const sizeClass = textSize ? `font-${textSize}` : '';
+    const weightClass = textWeight ? `font-${textWeight}` : '';
+
+    const variantClasses = textVariant
+      ? getVariantClasses(textVariant)
+      : [sizeClass, weightClass];
     const generateDynamicClass = (type: string, value: string | undefined) => {
       if (!value) return undefined;
 

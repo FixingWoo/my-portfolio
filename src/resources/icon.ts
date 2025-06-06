@@ -1,5 +1,8 @@
 import { IconType } from 'react-icons';
 
+import { HiEnvelope } from 'react-icons/hi2';
+import { FaGithub } from 'react-icons/fa6';
+
 import {
   PiUserCircleDuotone,
   PiGridFourDuotone,
@@ -10,6 +13,8 @@ export const iconLibrary: Record<string, IconType> = {
   person: PiUserCircleDuotone,
   grid: PiGridFourDuotone,
   book: PiBookBookmarkDuotone,
+  email: HiEnvelope,
+  github: FaGithub,
 };
 
 export type IconLibrary = typeof iconLibrary;

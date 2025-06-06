@@ -19,6 +19,10 @@ const Icon = forwardRef<HTMLDivElement, IProps>(
   ({ name, size = 'm', decorative = true, ...rest }, ref) => {
     const IconComponent: IconType | undefined = iconLibrary[name];
 
+    if (!IconComponent) {
+      console.warn(`"${name}" 해당 아이콘은 존재하지 않습니다.`);
+      return null;
+    }
     return (
       <Flex
         className={cn(styles[size])}

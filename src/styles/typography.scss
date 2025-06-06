@@ -155,3 +155,50 @@ p {
     );
   }
 }
+
+/****************************/
+/*           LABEL         */
+/****************************/
+.font-label {
+  font-family: var(--font-family-label);
+
+  &.font-strong,
+  & > .font-strong {
+    font-weight: var(--font-weight-label-strong);
+  }
+
+  &.font-default,
+  & > .font-default {
+    font-weight: var(--font-weight-label-default);
+  }
+
+  &.font-l,
+  & > .font-l {
+    font-size: calc(
+      var(--font-size-label-l) * var(--font-size-label-multiplier)
+    );
+    line-height: calc(
+      var(--line-height-label-l) * var(--line-height-label-multiplier)
+    );
+  }
+
+  &.font-m,
+  & > .font-m {
+    font-size: calc(
+      var(--font-size-label-m) * var(--font-size-label-multiplier)
+    );
+    line-height: calc(
+      var(--line-height-label-m) * var(--line-height-label-multiplier)
+    );
+  }
+
+  &.font-s,
+  & > .font-s {
+    font-size: calc(
+      var(--font-size-label-s) * var(--font-size-label-multiplier)
+    );
+    line-height: calc(
+      var(--line-height-label-s) * var(--line-height-label-multiplier)
+    );
+  }
+}

@@ -9,6 +9,7 @@ interface IProps {
   children: ReactNode;
   className?: string;
   style?: React.CSSProperties;
+  [key: string]: any;
 }
 
 const isExternalLink = (url: string) => /^https?:\/\//.test(url);
