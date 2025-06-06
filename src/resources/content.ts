@@ -30,7 +30,10 @@ export const about = {
         company: 'BD',
         period: '2021 - 현재',
         role: 'Front-end Enginner',
-        achievements: ['123'],
+        achievements: [
+          ' Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.',
+          'Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.',
+        ],
       },
     ],
   },

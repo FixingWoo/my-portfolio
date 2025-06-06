@@ -77,33 +77,44 @@ export default function About() {
               {about.work.title}
             </Heading>
             <Column fillWidth gap="l" marginBottom="40">
-              {about.work.experiences.map((item) => (
-                <Column key={`${item.company}`} fillWidth>
+              {about.work.experiences.map((experience) => (
+                <Column key={`${experience.company}`} fillWidth>
                   <Flex
                     fillWidth
                     vertical="end"
                     horizontal="space-between"
                     marginBottom="4"
                   >
-                    <Text id={item.company} variant="heading-strong-l">
-                      {item.company}
+                    <Text id={experience.company} variant="heading-strong-l">
+                      {experience.company}
                     </Text>
                     <Text
-                      id={item.period}
+                      id={experience.period}
                       variant="heading-default-xs"
                       onBackground="neutral-weak"
                     >
-                      {item.period}
+                      {experience.period}
                     </Text>
                   </Flex>
                   <Text
-                    id={item.role}
+                    id={experience.role}
                     variant="body-default-s"
                     marginBottom="m"
                     onBackground="brand-weak"
                   >
-                    {item.role}
+                    {experience.role}
                   </Text>
+                  <Column as={'ul'} gap="16">
+                    {experience.achievements.map((achievement) => (
+                      <Text
+                        as={'li'}
+                        variant="body-default-m"
+                        key={`${experience.company}`}
+                      >
+                        {achievement}
+                      </Text>
+                    ))}
+                  </Column>
                 </Column>
               ))}
             </Column>
