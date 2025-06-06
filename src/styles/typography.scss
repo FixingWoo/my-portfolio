@@ -24,6 +24,74 @@ p {
 }
 
 /****************************/
+/*           HEADING         */
+/****************************/
+
+.font-heading {
+  font-family: var(--font-family-heading);
+
+  &.font-strong,
+  & > .font-strong {
+    font-weight: var(--font-weight-heading-strong);
+  }
+
+  &.font-default,
+  & > .font-default {
+    font-weight: var(--font-weight-heading-default);
+  }
+
+  &.font-xl,
+  & > .font-xl {
+    font-size: calc(
+      var(--font-size-heading-xl) * var(--font-size-heading-multiplier)
+    );
+    line-height: calc(
+      var(--line-height-heading-xl) * var(--line-height-heading-multiplier)
+    );
+  }
+
+  &.font-l,
+  & > .font-l {
+    font-size: calc(
+      var(--font-size-heading-l) * var(--font-size-heading-multiplier)
+    );
+    line-height: calc(
+      var(--line-height-heading-l) * var(--line-height-heading-multiplier)
+    );
+  }
+
+  &.font-m,
+  & > .font-m {
+    font-size: calc(
+      var(--font-size-heading-m) * var(--font-size-heading-multiplier)
+    );
+    line-height: calc(
+      var(--line-height-heading-m) * var(--line-height-heading-multiplier)
+    );
+  }
+
+  &.font-s,
+  & > .font-s {
+    font-size: calc(
+      var(--font-size-heading-s) * var(--font-size-heading-multiplier)
+    );
+    line-height: calc(
+      var(--line-height-heading-s) * var(--line-height-heading-multiplier)
+    );
+  }
+
+  &.font-xs,
+  & > .font-xs {
+    font-size: calc(
+      var(--font-size-heading-xs) * var(--font-size-heading-multiplier)
+    );
+    line-height: calc(
+      var(--line-height-heading-xs) * var(--line-height-heading-multiplier)
+    );
+  }
+}
+
+/****************************/
 /*           BODY         */
 /****************************/
 

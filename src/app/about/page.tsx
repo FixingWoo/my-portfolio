@@ -66,6 +66,48 @@ export default function About() {
           >
             {about.intro.description}
           </Column>
+
+          <>
+            <Heading
+              as="h2"
+              id={about.work.title}
+              marginBottom="m"
+              variant="display-strong-m"
+            >
+              {about.work.title}
+            </Heading>
+            <Column fillWidth gap="l" marginBottom="40">
+              {about.work.experiences.map((item) => (
+                <Column key={`${item.company}`} fillWidth>
+                  <Flex
+                    fillWidth
+                    vertical="end"
+                    horizontal="space-between"
+                    marginBottom="4"
+                  >
+                    <Text id={item.company} variant="heading-strong-l">
+                      {item.company}
+                    </Text>
+                    <Text
+                      id={item.period}
+                      variant="heading-default-xs"
+                      onBackground="neutral-weak"
+                    >
+                      {item.period}
+                    </Text>
+                  </Flex>
+                  <Text
+                    id={item.role}
+                    variant="body-default-s"
+                    marginBottom="m"
+                    onBackground="brand-weak"
+                  >
+                    {item.role}
+                  </Text>
+                </Column>
+              ))}
+            </Column>
+          </>
         </Column>
       </Flex>
     </Column>

@@ -30,7 +30,7 @@ type RadiusSize = TShirtSizes | 'full';
 
 type RadiusNest = '4' | '8';
 
-type ColorScheme = 'neutral';
+type ColorScheme = 'neutral' | 'brand';
 
 type ColorWeight = 'weak' | 'medium' | 'strong';
 
