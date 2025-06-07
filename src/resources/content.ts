@@ -37,4 +37,13 @@ export const about = {
       },
     ],
   },
+  studies: {
+    title: '학력',
+    institutions: [
+      {
+        name: '백석대학교',
+        department: '정보보호학과',
+      },
+    ],
+  },
 };

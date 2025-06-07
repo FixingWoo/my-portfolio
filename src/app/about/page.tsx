@@ -105,7 +105,7 @@ export default function About() {
                     {experience.role}
                   </Text>
                   <Column as={'ul'} gap="16">
-                    {experience.achievements.map((achievement) => (
+                    {/* {experience.achievements.map((achievement) => (
                       <Text
                         as={'li'}
                         variant="body-default-m"
@@ -113,8 +113,32 @@ export default function About() {
                       >
                         {achievement}
                       </Text>
-                    ))}
+                    ))} */}
                   </Column>
+                </Column>
+              ))}
+            </Column>
+          </>
+
+          <>
+            <Heading
+              as="h2"
+              id={about.studies.title}
+              marginBottom="m"
+              variant="display-strong-m"
+            >
+              {about.studies.title}
+            </Heading>
+            <Column fillWidth gap="l" marginBottom="40">
+              {about.studies.institutions.map((institution) => (
+                <Column key={institution.name} fillWidth gap="4">
+                  <Text variant="heading-strong-l">{institution.name}</Text>
+                  <Text
+                    variant="heading-default-xs"
+                    onBackground="neutral-weak"
+                  >
+                    {institution.department}
+                  </Text>
                 </Column>
               ))}
             </Column>
