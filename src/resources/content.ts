@@ -24,7 +24,7 @@ export const about = {
       '4년간 웹 프론트엔드 엔지니어로 일하며 반복되는 UI를 체계화하고 개선하는 데 보람을 느껴왔습니다. 더 나은 사용자 경험과 개발 생산성을 고민하며 문제 해결에 즐거움을 느낍니다. 코드 리팩토링과 공통화에 관심이 많고, 협업을 통해 더 나은 결과를 만드는 것을 중요하게 생각합니다.',
   },
   work: {
-    title: '경력',
+    title: 'Work Experience.',
     experiences: [
       {
         company: 'BD',
@@ -38,11 +38,54 @@ export const about = {
     ],
   },
   studies: {
-    title: '학력',
+    title: 'Education.',
     institutions: [
       {
         name: '백석대학교',
         department: '정보보호학과',
+      },
+    ],
+  },
+  technical: {
+    title: 'Skill.',
+    categories: [
+      {
+        name: 'Frontend',
+        items: [
+          'HTML5',
+          'CSS 3',
+          'SCSS',
+          'JavaScript',
+          'TypeScript',
+          'Vue 3',
+          'React',
+          'Next.js',
+          'Storybook',
+        ],
+      },
+      {
+        name: 'State Management',
+        items: ['Vuex', 'Pinia', 'Zustand'],
+      },
+      {
+        name: 'Backend',
+        items: ['Spring Boot', 'FastAPI'],
+      },
+      {
+        name: 'Database',
+        items: ['MySQL', 'MyBatis'],
+      },
+      {
+        name: 'DevOps / Deployment',
+        items: ['Vercel', 'Git', 'GitLab CI'],
+      },
+      {
+        name: 'AI / API',
+        items: ['LangChain', 'openAI API'],
+      },
+      {
+        name: 'Collaboration / Design',
+        items: ['Atlassian', 'Slack', 'Figma'],
       },
     ],
   },

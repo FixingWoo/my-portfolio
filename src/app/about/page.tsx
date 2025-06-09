@@ -143,6 +143,33 @@ export default function About() {
               ))}
             </Column>
           </>
+
+          <>
+            <Heading
+              as="h2"
+              id={about.technical.title}
+              marginBottom="m"
+              variant="display-strong-m"
+            >
+              {about.technical.title}
+            </Heading>
+
+            <Column fillWidth gap="l" marginBottom="40">
+              {about.technical.categories.map((category) => (
+                <Column key={category.name} fillWidth gap="4">
+                  <Text variant="heading-strong-l">{category.name}</Text>
+
+                  <Text
+                    as={'li'}
+                    variant="heading-default-xs"
+                    onBackground="neutral-weak"
+                  >
+                    {category.items.join(', ')}
+                  </Text>
+                </Column>
+              ))}
+            </Column>
+          </>
         </Column>
       </Flex>
     </Column>
