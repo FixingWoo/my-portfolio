@@ -27,12 +27,24 @@ export const about = {
     title: 'Work Experience.',
     experiences: [
       {
-        company: 'BD',
+        company: '(주)BD',
         period: '2021 - 현재',
         role: 'Front-end Enginner',
         achievements: [
-          ' Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.',
-          'Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.',
+          'React, Vue - 재사용 가능한 공통 함수/유틸리티 모듈 구현',
+          'Storybook 기반 문서화',
+          'SCSS, BEM 활용 관리자·사용자 반응형 웹 퍼블리싱',
+          'WebGL 렌더링 최적화 및 성능 개선',
+          '웹 성능 최적화',
+        ],
+      },
+      {
+        company: '아사삭',
+        period: '2024.01 - 2025.04',
+        role: 'Front-end Enginner',
+        achievements: [
+          '픽업/배송 주문 서비스 "아사삭 스토어 어드민" 개발',
+          '공통 함수 및 유틸리티 모듈 구현',
         ],
       },
     ],
@@ -42,6 +54,7 @@ export const about = {
     institutions: [
       {
         name: '백석대학교',
+        period: '2015.03 ~ 2021.01',
         department: '정보보호학과',
       },
     ],
