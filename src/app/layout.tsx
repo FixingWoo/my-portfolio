@@ -39,6 +39,13 @@ export default function RootLayout({
           <div className={styles.background}></div>
         </div>
         <Flex fillWidth minHeight={'16'} hide="s" />
+        <Flex
+          className={styles.fadeMask}
+          zIndex={10}
+          fillWidth
+          position={'fixed'}
+          height={'80'}
+        ></Flex>
         <Header />
         <Flex
           zIndex={0}

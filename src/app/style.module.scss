@@ -33,3 +33,26 @@
   background-image: radial-gradient(#60e4fc 1px, rgba(0, 0, 0, 0) 1px);
   background-size: 0.125rem 0.125rem;
 }
+
+.fadeMask {
+  -webkit-backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.5rem);
+  background: linear-gradient(
+    var(--gradient-direction),
+    var(--base-color),
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    var(--gradient-direction),
+    black 20%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    var(--gradient-direction),
+    black 20%,
+    transparent 100%
+  );
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
