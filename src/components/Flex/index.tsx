@@ -1,13 +1,14 @@
 'use client';
 
-import { CSSProperties, forwardRef } from 'react';
+import { CSSProperties, forwardRef, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
 import { SIZES, T_SHIRT_SIZES } from '@/constants';
 import { getVariantClasses } from '@/utils';
 
 interface ComponentProps
-  extends FlexProps,
+  extends HTMLAttributes<HTMLDivElement>,
+    FlexProps,
     SpacingProps,
     SizeProps,
     StyleProps,
@@ -19,6 +20,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
   (
     {
       as: Component = 'div',
+      cursor,
       mobileDirection,
       textVariant,
       textSize,
@@ -113,6 +115,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
     };
 
     const classes = cn(
+      cursor && `cursor-${cursor}`,
       mobileDirection && `s-flex-${mobileDirection}`,
       inline ? 'inline-flex' : 'flex',
       generateDynamicClass('background', background),

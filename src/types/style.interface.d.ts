@@ -1,17 +1,16 @@
-interface CommonProps extends HTMLAttributes<HTMLDivElement> {
+interface CommonProps {
   className?: string;
-  children?: ReactNode;
   style?: React.CSSProperties;
   onBackground?: `${ColorScheme}-${ColorWeight}`;
   align?: CSSProperties['textAlign'];
 }
 
-interface ConditionalProps extends HTMLAttributes<HTMLDivElement> {
+interface ConditionalProps {
   hide?: 's' | 'm' | 'l';
   show?: 's' | 'm' | 'l';
 }
 
-interface DisplayProps extends HTMLAttributes<HTMLDivElement> {
+interface DisplayProps {
   as?: ElementType;
   inline?: boolean;
   pointerEvents?: 'none' | 'all' | 'auto';
@@ -22,7 +21,7 @@ interface DisplayProps extends HTMLAttributes<HTMLDivElement> {
   zIndex?: 0 | 1 | 10;
 }
 
-interface FlexProps extends HTMLAttributes<HTMLDivElement> {
+interface FlexProps {
   direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   mobileDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   horizontal?:
@@ -54,7 +53,7 @@ interface TextProps<T extends ElementType = 'span'> extends HTMLAttributes<T> {
   weight?: TextWeight;
 }
 
-interface SpacingProps extends HTMLAttributes<HTMLDivElement> {
+interface SpacingProps {
   padding?: SpacingToken;
   paddingLeft?: SpacingToken;
   paddingRight?: SpacingToken;
@@ -76,7 +75,7 @@ interface SpacingProps extends HTMLAttributes<HTMLDivElement> {
   gap?: SpacingToken;
 }
 
-interface SizeProps extends HTMLAttributes<HTMLDivElement> {
+interface SizeProps {
   width?: number | SpacingToken;
   height?: number | SpacingToken;
   maxWidth?: number | SpacingToken;
@@ -91,7 +90,7 @@ interface SizeProps extends HTMLAttributes<HTMLDivElement> {
   fillHeight?: boolean;
 }
 
-interface StyleProps extends HTMLAttributes<HTMLDivElement> {
+interface StyleProps {
   background?:
     | `${ColorScheme}-${ColorWeight}`
     | `${ColorScheme}-alpha-${ColorWeight}`
@@ -139,4 +138,5 @@ interface StyleProps extends HTMLAttributes<HTMLDivElement> {
   textSize?: TextSize;
   textType?: TextType;
   textWeight?: TextWeight;
+  cursor?: CSSProperties['cursor'] | 'interactive';
 }
