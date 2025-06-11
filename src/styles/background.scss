@@ -6,3 +6,10 @@
   background-color: var(--surface-background);
   backdrop-filter: var(--backdrop-filter);
 }
+
+/* NEUTRAL */
+.neutral-background-strong,
+::selection {
+  background-color: var(--neutral-on-background-weak);
+  color: var(--neutral-background-weak);
+}
