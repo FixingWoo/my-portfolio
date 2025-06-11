@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Anchor from '@/components/Anchor';
 import Button from '@/components/Button';
 import Column from '@/components/Column';
 import Flex from '@/components/Flex';
@@ -11,13 +12,44 @@ import styles from './style.module.scss';
 import { person, social, about } from '@/resources';
 
 export default function About() {
+  const structure = [
+    {
+      title: about.intro.title,
+      items: [],
+    },
+    {
+      title: about.work.title,
+      items: about.work.experiences.map((experience) => experience.company),
+    },
+    {
+      title: about.studies.title,
+      items: about.studies.institutions.map((institution) => institution.name),
+    },
+    {
+      title: about.technical.title,
+      items: about.technical.categories.map((skill) => skill.name),
+    },
+  ];
+
   return (
     <Column maxWidth={'m'}>
+      <Column
+        position={'fixed'}
+        left="0"
+        style={{ top: '50%', transform: 'translateY(-50%)' }}
+        paddingLeft="24"
+        gap="32"
+        hide="s"
+      >
+        <Anchor structure={structure} />
+      </Column>
+
       <Flex fillWidth horizontal="center" mobileDirection="column">
-        <Column flex={9} maxWidth={40}>
+        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           <Column
+            id={about.intro.title}
             fillWidth
-            minHeight={'160'}
+            minHeight="160"
             vertical="center"
             marginBottom="32"
           >
@@ -32,7 +64,7 @@ export default function About() {
               {person.role}
             </Text>
             <Flex
-              className=""
+              className={styles.blockAlign}
               gap="8"
               horizontal="center"
               paddingTop="20"
@@ -77,7 +109,7 @@ export default function About() {
               {about.work.title}
             </Heading>
             <Column fillWidth gap="l" marginBottom="40">
-              {about.work.experiences.map((experience) => (
+              {about.work.experiences.map((experience, index) => (
                 <Column key={`${experience.company}`} fillWidth>
                   <Flex
                     fillWidth
@@ -109,7 +141,7 @@ export default function About() {
                       <Text
                         as={'li'}
                         variant="body-default-m"
-                        key={`${experience.company}`}
+                        key={`${experience.company}-${index}`}
                       >
                         {achievement}
                       </Text>

@@ -47,7 +47,7 @@ const Anchor: React.FC<IProps> = ({ structure }) => {
         <Column key={index} gap="12">
           <Flex
             onClick={() => scrollTo(section.title, 80)}
-            cursor="interactive"
+            cursor="pointer"
             className={styles.hover}
             gap="8"
             vertical="center"
