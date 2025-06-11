@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons';
 
-import { HiEnvelope } from 'react-icons/hi2';
+import { HiEnvelope, HiMiniGlobeAsiaAustralia } from 'react-icons/hi2';
 import { FaGithub } from 'react-icons/fa6';
 
 import {
@@ -15,6 +15,7 @@ export const iconLibrary: Record<string, IconType> = {
   book: PiBookBookmarkDuotone,
   email: HiEnvelope,
   github: FaGithub,
+  global: HiMiniGlobeAsiaAustralia,
 };
 
 export type IconLibrary = typeof iconLibrary;
