@@ -109,7 +109,7 @@ export default function About() {
               {about.work.title}
             </Heading>
             <Column fillWidth gap="l" marginBottom="40">
-              {about.work.experiences.map((experience, index) => (
+              {about.work.experiences.map((experience) => (
                 <Column key={`${experience.company}`} fillWidth>
                   <Flex
                     fillWidth
@@ -137,7 +137,7 @@ export default function About() {
                     {experience.role}
                   </Text>
                   <Column as={'ul'} gap="16">
-                    {experience.achievements.map((achievement) => (
+                    {experience.achievements.map((achievement, index) => (
                       <Text
                         as={'li'}
                         variant="body-default-m"
