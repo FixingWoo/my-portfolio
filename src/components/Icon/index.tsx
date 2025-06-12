@@ -12,11 +12,10 @@ import { IconName, iconLibrary } from '../../resources/icon';
 interface IProps extends React.ComponentProps<typeof Flex> {
   name: IconName;
   size?: 'xs' | 's' | 'm' | 'l' | 'xl';
-  decorative?: boolean;
 }
 
 const Icon = forwardRef<HTMLDivElement, IProps>(
-  ({ name, size = 'm', decorative = true, ...rest }, ref) => {
+  ({ name, size = 'm', ...rest }, ref) => {
     const IconComponent: IconType | undefined = iconLibrary[name];
 
     if (!IconComponent) {
