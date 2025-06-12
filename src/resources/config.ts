@@ -1,4 +1,6 @@
-export const style = {
+const baseURL = 'https://www.fixingwoo.com';
+
+const style = {
   theme: 'dark', // theme is not necessary when using ThemeProvider (default)
   neutral: 'gray', // sand | gray | slate
   brand: 'cyan', // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
@@ -11,9 +13,11 @@ export const style = {
   scaling: '100', // 90 | 95 | 100 | 105 | 110
 };
 
-export const routes = {
+const routes = {
   '/': true,
   '/about': true,
   '/work': true,
   '/blog': true,
 };
+
+export { baseURL, style, routes };
