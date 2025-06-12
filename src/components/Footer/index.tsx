@@ -2,7 +2,7 @@ import Flex from '../Flex';
 import IconButton from '../IconButton';
 import Text from '../Text';
 
-import styles from './style.module.scss';
+// import styles from './style.module.scss';
 
 import { person, social } from '@/resources';
 
@@ -18,7 +18,7 @@ const Footer = () => {
       mobileDirection="column"
     >
       <Flex
-        className={styles.mobile}
+        // className={styles.mobile}
         maxWidth={'m'}
         paddingX="16"
         paddingY="8"
