@@ -5,6 +5,7 @@ import styles from './style.module.scss';
 import type { Metadata } from 'next';
 
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import Flex from '@/components/Flex';
 
 import { style } from '@/resources';
@@ -59,6 +60,7 @@ export default function RootLayout({
             {children}
           </Flex>
         </Flex>
+        <Footer />
       </body>
     </Flex>
   );

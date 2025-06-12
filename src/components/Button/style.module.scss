@@ -39,6 +39,17 @@
   }
 }
 
+.ghost {
+  border: none;
+  background: var(--static-transparent);
+  color: var(--neutral-on-background-medium);
+
+  &:hover,
+  &:focus {
+    color: var(--neutral-on-background-strong);
+  }
+}
+
 .s {
   padding: var(--static-space-4) var(--static-space-8);
   min-height: var(--static-space-32);
