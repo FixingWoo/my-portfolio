@@ -8,6 +8,7 @@ import { work } from '@/resources';
 export async function generateMetadata() {
   return Meta.generate({
     title: work.title,
+    description: work.description,
   });
 }
 

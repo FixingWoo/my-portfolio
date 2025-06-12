@@ -17,6 +17,7 @@ import { person, social, about } from '@/resources';
 export async function generateMetadata() {
   return Meta.generate({
     title: about.title,
+    description: about.description,
   });
 }
 

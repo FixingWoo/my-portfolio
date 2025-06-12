@@ -21,6 +21,8 @@ export const social = [
 
 export const about = {
   title: `About - ${person.name}`,
+  description:
+    '경험 많은 프론트엔드 엔지니어로, React와 Vue를 활용해 재사용 가능한 모듈 개발 및 웹 성능 최적화에 강점이 있습니다. (주)BD와 아사삭에서 다양한 프로젝트를 수행했으며, SCSS와 BEM으로 반응형 웹 퍼블리싱도 담당했습니다.',
   intro: {
     title: 'Introduction',
     description:
@@ -109,8 +111,10 @@ export const about = {
 
 export const work = {
   title: `Work - ${person.name}`,
+  description: '준비 중입니다.',
 };
 
 export const blog = {
   title: `Blog -  ${person.name}`,
+  description: '준비 중입니다.',
 };

@@ -8,6 +8,7 @@ import { blog } from '@/resources';
 export async function generateMetadata() {
   return Meta.generate({
     title: blog.title,
+    description: blog.description,
   });
 }
 
