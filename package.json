@@ -1,12 +1,15 @@
 {
-  "name": "my-app",
+  "name": "resume",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "pnpm build && pnpm export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "classnames": "^2.5.1",
@@ -24,6 +27,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
+    "gh-pages": "^6.3.0",
     "postcss-custom-media": "^11.0.6",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^10.2.0",
