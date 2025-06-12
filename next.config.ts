@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   basePath: '/resume',
-  assetPrefix: '/resume',
+  assetPrefix: '/resume/',
 };
 
 export default nextConfig;
