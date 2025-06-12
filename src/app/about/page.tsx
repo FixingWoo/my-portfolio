@@ -10,7 +10,15 @@ import Text from '@/components/Text';
 
 import styles from './style.module.scss';
 
+import { Meta } from '@/modules';
+
 import { person, social, about } from '@/resources';
+
+export async function generateMetadata() {
+  return Meta.generate({
+    title: about.title,
+  });
+}
 
 export default function About() {
   const structure = [

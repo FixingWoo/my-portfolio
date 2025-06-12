@@ -20,6 +20,7 @@ export const social = [
 ];
 
 export const about = {
+  title: `About - ${person.name}`,
   intro: {
     title: 'Introduction',
     description:
@@ -104,4 +105,12 @@ export const about = {
       },
     ],
   },
+};
+
+export const work = {
+  title: `Work - ${person.name}`,
+};
+
+export const blog = {
+  title: `Blog -  ${person.name}`,
 };
