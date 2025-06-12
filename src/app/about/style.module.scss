@@ -7,3 +7,10 @@
     align-self: center;
   }
 }
+
+.image {
+  position: sticky;
+  object-position: center;
+  height: fit-content;
+  top: var(--static-space-64);
+}

@@ -3,6 +3,7 @@ export const person = {
   name: '조정우',
   role: 'Frontend Engineer',
   email: 'fixingwoo@gmail.com',
+  image: '/images/me.jpeg',
 };
 
 export const social = [

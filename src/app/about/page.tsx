@@ -5,6 +5,7 @@ import Button from '@/components/Button';
 import Column from '@/components/Column';
 import Flex from '@/components/Flex';
 import Heading from '@/components/Heading';
+import ImageFrame from '@/components/ImageFrame';
 import Text from '@/components/Text';
 
 import styles from './style.module.scss';
@@ -45,6 +46,18 @@ export default function About() {
       </Column>
 
       <Flex fillWidth horizontal="center" mobileDirection="column">
+        <Column
+          className={styles.image}
+          position="sticky"
+          minWidth="160"
+          paddingX="l"
+          paddingBottom="xl"
+          gap="m"
+          flex={3}
+          horizontal="center"
+        >
+          <ImageFrame src={person.image} radius="full" fill size="xl" />
+        </Column>
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           <Column
             id={about.intro.title}
