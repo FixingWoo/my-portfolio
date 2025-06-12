@@ -8,8 +8,8 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "pnpm build && pnpm export",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "classnames": "^2.5.1",
