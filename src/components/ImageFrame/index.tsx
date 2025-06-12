@@ -34,8 +34,6 @@ const ImageFrame: React.FC<IProps> = ({
   const sizes =
     typeof size === 'string' ? `${sizeMapping[size]}px` : `${size * 16}px`;
 
-  console.log(sizes);
-
   return (
     <>
       <Flex

@@ -27,10 +27,10 @@
 }
 
 .xl {
-  width: var(--static-space-160);
-  height: var(--static-space-160);
-  min-width: var(--static-space-160);
-  min-height: var(--static-space-160);
+  width: var(--static-space-160) !important;
+  height: var(--static-space-160) !important;
+  min-width: var(--static-space-160) !important;
+  min-height: var(--static-space-160) !important;
 
   .position {
     bottom: var(--static-space-16);
