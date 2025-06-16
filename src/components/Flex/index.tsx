@@ -196,8 +196,8 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
       zIndex && `z-index-${zIndex}`,
       shadow && `shadow-${shadow}`,
       gap && `g-${gap}`,
-      className,
-      ...variantClasses
+      ...variantClasses,
+      className
     );
 
     const parseSize = (

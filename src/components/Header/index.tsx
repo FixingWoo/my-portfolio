@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import styles from './style.module.scss';
 
 import Flex from '../Flex';
 import TimeDisplay from '../TimeDisplay';
@@ -15,7 +16,7 @@ const Header = () => {
     <Flex
       as="header"
       position="sticky"
-      top="0"
+      className={styles.position}
       fillWidth
       fitHeight
       zIndex={10}

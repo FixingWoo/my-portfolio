@@ -1,0 +1,12 @@
+.position {
+  position: sticky;
+  top: 0;
+}
+
+@media (--s) {
+  .position {
+    position: fixed !important;
+    top: auto;
+    bottom: var(--static-space-24);
+  }
+}

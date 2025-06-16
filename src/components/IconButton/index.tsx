@@ -17,7 +17,7 @@ interface IProps {
   icon?: IconName;
   id?: string;
   className?: string;
-  variant?: 'ghost' | 'outline';
+  variant?: 'ghost' | 'secondary';
   size?: 's' | 'm' | 'l';
   radius?:
     | 'none'
@@ -76,7 +76,7 @@ const IconButton = forwardRef<HTMLButtonElement, IProps | AnchorProps>(
       <ElementType
         ref={ref}
         className={cn(
-          styles.button,
+          buttonStyles.button,
           buttonStyles[variant],
           styles[size],
           className,

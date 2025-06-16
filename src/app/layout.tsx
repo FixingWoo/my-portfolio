@@ -46,6 +46,7 @@ export default function RootLayout({
           fillWidth
           position={'fixed'}
           height={'80'}
+          hide="s"
         ></Flex>
         <Header />
         <Flex
