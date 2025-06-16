@@ -1,13 +1,22 @@
 module.exports = {
   plugins: [
+    [
+      '@csstools/postcss-global-data',
+      {
+        files: ['src/styles/breakpoints.scss'],
+      },
+    ],
+    'postcss-custom-media',
     'postcss-flexbugs-fixes',
     [
       'postcss-preset-env',
       {
-        autoprefixer: { flexbox: 'no-2009' },
+        autoprefixer: {
+          flexbox: 'no-2009',
+        },
         stage: 3,
         features: {
-          'custom-properties': false, // CSS 변수 그대로 유지
+          'custom-properties': false,
         },
       },
     ],
