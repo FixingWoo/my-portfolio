@@ -1,10 +1,3 @@
-.image {
-  position: sticky;
-  object-position: center;
-  height: fit-content;
-  top: var(--static-space-64);
-}
-
 @media (--s) {
   .textAlign {
     text-align: center;
@@ -12,9 +5,5 @@
 
   .blockAlign {
     align-self: center;
-  }
-
-  .image {
-    top: auto;
   }
 }

@@ -58,8 +58,6 @@ export default function About() {
       <Flex fillWidth horizontal="center" mobileDirection="column">
         {about.avatar.display && (
           <Column
-            className={styles.image}
-            position="sticky"
             minWidth="160"
             paddingX="l"
             paddingBottom="xl"
