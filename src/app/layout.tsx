@@ -4,11 +4,13 @@ import styles from './style.module.scss';
 
 import type { Metadata } from 'next';
 
+import cn from 'classnames';
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Flex from '@/components/Flex';
 
-import { style } from '@/resources';
+import { style, font } from '@/resources';
 
 export const metadata: Metadata = {
   title: 'Jungwu Portfolio',
@@ -24,13 +26,11 @@ export default function RootLayout({
     <Flex
       as="html"
       data-neutral={style.neutral}
-      data-brand={style.brand}
-      data-accent={style.accent}
       data-solid={style.solid}
-      data-solid-style={style.solidStyle}
       data-border={style.border}
       data-surface={style.surface}
       data-transition={style.transition}
+      className={cn(font.primary.variable)}
     >
       <body
         className="relative flex flex-column min-width-0 fill-width p-0 m-0"
