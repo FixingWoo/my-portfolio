@@ -27,12 +27,12 @@ export const about = {
   description:
     '경험 많은 프론트엔드 엔지니어로, React와 Vue를 활용해 재사용 가능한 모듈 개발 및 웹 성능 최적화에 강점이 있습니다. (주)BD와 아사삭에서 다양한 프로젝트를 수행했으며, SCSS와 BEM으로 반응형 웹 퍼블리싱도 담당했습니다.',
   intro: {
-    title: 'Introduction',
+    title: '자기소개',
     description:
       '4년간 웹 프론트엔드 엔지니어로 일하며 반복되는 UI를 체계화하고 개선하는 데 보람을 느껴왔습니다. 더 나은 사용자 경험과 개발 생산성을 고민하며 문제 해결에 즐거움을 느낍니다. 코드 리팩토링과 공통화에 관심이 많고, 협업을 통해 더 나은 결과를 만드는 것을 중요하게 생각합니다.',
   },
   work: {
-    title: 'Work Experience.',
+    title: '업무경험',
     experiences: [
       {
         company: '(주)BD',
@@ -58,17 +58,17 @@ export const about = {
     ],
   },
   studies: {
-    title: 'Education.',
+    title: '학력',
     institutions: [
       {
         name: '백석대학교',
-        period: '2015.03 ~ 2021.01',
-        department: '정보보호학과',
+        period: '2015.03 ~ 2021.02',
+        department: '정보보호학과 학사 졸업',
       },
     ],
   },
   technical: {
-    title: 'Skill.',
+    title: '보유 기술',
     categories: [
       {
         name: 'Frontend',
