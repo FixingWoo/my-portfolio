@@ -32,6 +32,7 @@ export const about = {
       '4년간 웹 프론트엔드 엔지니어로 일하며 반복되는 UI를 체계화하고 개선하는 데 보람을 느껴왔습니다. 더 나은 사용자 경험과 개발 생산성을 고민하며 문제 해결에 즐거움을 느낍니다. 코드 리팩토링과 공통화에 관심이 많고, 협업을 통해 더 나은 결과를 만드는 것을 중요하게 생각합니다.',
   },
   work: {
+    display: true,
     title: '업무경험',
     experiences: [
       {
@@ -51,21 +52,23 @@ export const about = {
         period: '2024.01 - 2025.04',
         role: 'Front-end Enginner',
         achievements: [
-          '픽업/배송 주문 서비스 "아사삭 스토어 어드민" 개발',
+          '픽업/배송 주문 확인 서비스 "아사삭 스토어 어드민" 개발',
           '공통 함수 및 유틸리티 모듈 구현',
         ],
       },
     ],
   },
   projects: {
+    display: false,
     title: '프로젝트',
     items: [
       {
-        name: '',
+        company: '(주)BD',
       },
     ],
   },
   studies: {
+    display: true,
     title: '학력',
     institutions: [
       {
@@ -76,6 +79,7 @@ export const about = {
     ],
   },
   technical: {
+    display: true,
     title: '보유 기술',
     categories: [
       {

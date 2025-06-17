@@ -3,6 +3,7 @@ const baseURL = 'https://www.fixingwoo.com';
 const style = {
   theme: 'light',
   neutral: 'gray',
+  brand: 'cyan',
   solid: 'contrast',
   border: 'rounded',
   surface: 'translucent',

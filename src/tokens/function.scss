@@ -38,3 +38,22 @@
   --function-neutral-600-30: var(--scheme-gray-600-30);
   --function-neutral-600-50: var(--scheme-gray-600-50);
 }
+
+[data-brand='cyan'] {
+  --function-brand-100: var(--scheme-cyan-100);
+  --function-brand-200: var(--scheme-cyan-200);
+  --function-brand-300: var(--scheme-cyan-300);
+  --function-brand-400: var(--scheme-cyan-400);
+  --function-brand-500: var(--scheme-cyan-500);
+  --function-brand-600: var(--scheme-cyan-600);
+  --function-brand-700: var(--scheme-cyan-700);
+  --function-brand-800: var(--scheme-cyan-800);
+  --function-brand-900: var(--scheme-cyan-900);
+  --function-brand-1000: var(--scheme-cyan-1000);
+  --function-brand-1100: var(--scheme-cyan-1100);
+  --function-brand-1200: var(--scheme-cyan-1200);
+
+  --function-brand-600-10: var(--scheme-cyan-600-10);
+  --function-brand-600-30: var(--scheme-cyan-600-30);
+  --function-brand-600-50: var(--scheme-cyan-600-50);
+}

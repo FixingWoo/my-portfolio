@@ -33,6 +33,10 @@ export default function About() {
       items: about.work.experiences.map((experience) => experience.company),
     },
     {
+      title: about.projects.title,
+      items: about.projects.items.map((item) => item.company),
+    },
+    {
       title: about.studies.title,
       items: about.studies.institutions.map((institution) => institution.name),
     },
@@ -134,124 +138,143 @@ export default function About() {
             {about.intro.description}
           </Column>
 
-          <>
-            <Heading
-              as="h2"
-              id={about.work.title}
-              marginBottom="m"
-              variant="display-strong-m"
-            >
-              {about.work.title}
-            </Heading>
-            <Column fillWidth gap="l" marginBottom="40">
-              {about.work.experiences.map((experience) => (
-                <Column key={`${experience.company}`} fillWidth>
-                  <Flex
-                    fillWidth
-                    vertical="end"
-                    horizontal="space-between"
-                    marginBottom="4"
-                  >
-                    <Text id={experience.company} variant="heading-strong-l">
-                      {experience.company}
-                    </Text>
-                    <Text
-                      id={experience.period}
-                      variant="heading-default-xs"
-                      onBackground="neutral-weak"
+          {about.work.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.work.title}
+                marginBottom="m"
+                variant="display-strong-m"
+              >
+                {about.work.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.work.experiences.map((experience) => (
+                  <Column key={`${experience.company}`} fillWidth>
+                    <Flex
+                      fillWidth
+                      vertical="end"
+                      horizontal="space-between"
+                      marginBottom="4"
                     >
-                      {experience.period}
-                    </Text>
-                  </Flex>
-                  <Text
-                    id={experience.role}
-                    variant="body-default-s"
-                    marginBottom="m"
-                    onBackground="brand-weak"
-                  >
-                    {experience.role}
-                  </Text>
-                  <Column as={'ul'} gap="8">
-                    {experience.achievements.map((achievement, index) => (
-                      <Text
-                        as={'li'}
-                        variant="body-default-m"
-                        key={`${experience.company}-${index}`}
-                      >
-                        {achievement}
+                      <Text id={experience.company} variant="heading-strong-l">
+                        {experience.company}
                       </Text>
-                    ))}
-                  </Column>
-                </Column>
-              ))}
-            </Column>
-          </>
-
-          <>
-            <Heading
-              as="h2"
-              id={about.studies.title}
-              marginBottom="m"
-              variant="display-strong-m"
-            >
-              {about.studies.title}
-            </Heading>
-            <Column fillWidth gap="l" marginBottom="40">
-              {about.studies.institutions.map((institution) => (
-                <Column key={institution.name} fillWidth>
-                  <Flex
-                    fillWidth
-                    vertical="end"
-                    horizontal="space-between"
-                    marginBottom="4"
-                  >
-                    <Text variant="heading-strong-l">{institution.name}</Text>
+                      <Text
+                        id={experience.period}
+                        variant="heading-default-xs"
+                        onBackground="neutral-weak"
+                      >
+                        {experience.period}
+                      </Text>
+                    </Flex>
                     <Text
+                      id={experience.role}
+                      variant="body-default-s"
+                      marginBottom="m"
+                      onBackground="brand-weak"
+                    >
+                      {experience.role}
+                    </Text>
+                    <Column as={'ul'} gap="8">
+                      {experience.achievements.map((achievement, index) => (
+                        <Text
+                          as={'li'}
+                          variant="body-default-m"
+                          key={`${experience.company}-${index}`}
+                        >
+                          {achievement}
+                        </Text>
+                      ))}
+                    </Column>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.projects.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.projects.title}
+                marginBottom="m"
+                variant="display-strong-m"
+              >
+                {about.projects.title}
+              </Heading>
+            </>
+          )}
+
+          {about.studies.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.studies.title}
+                marginBottom="m"
+                variant="display-strong-m"
+              >
+                {about.studies.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.studies.institutions.map((institution) => (
+                  <Column key={institution.name} fillWidth>
+                    <Flex
+                      fillWidth
+                      vertical="end"
+                      horizontal="space-between"
+                      marginBottom="4"
+                    >
+                      <Text variant="heading-strong-l">{institution.name}</Text>
+                      <Text
+                        variant="heading-default-xs"
+                        onBackground="neutral-weak"
+                      >
+                        {institution.period}
+                      </Text>
+                    </Flex>
+                    <Text
+                      id={institution.name}
+                      variant="body-default-m"
+                      marginBottom="m"
+                      onBackground="neutral-weak"
+                    >
+                      {institution.department}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.technical.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.technical.title}
+                marginBottom="m"
+                variant="display-strong-m"
+              >
+                {about.technical.title}
+              </Heading>
+
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.technical.categories.map((category) => (
+                  <Column key={category.name} fillWidth gap="4">
+                    <Text variant="heading-strong-l">{category.name}</Text>
+
+                    <Text
+                      as={'li'}
                       variant="heading-default-xs"
                       onBackground="neutral-weak"
                     >
-                      {institution.period}
+                      {category.items.join(', ')}
                     </Text>
-                  </Flex>
-                  <Text
-                    id={institution.name}
-                    variant="body-default-m"
-                    marginBottom="m"
-                    onBackground="neutral-weak"
-                  >
-                    {institution.department}
-                  </Text>
-                </Column>
-              ))}
-            </Column>
-          </>
-
-          <>
-            <Heading
-              as="h2"
-              id={about.technical.title}
-              marginBottom="m"
-              variant="display-strong-m"
-            >
-              {about.technical.title}
-            </Heading>
-
-            <Column fillWidth gap="l" marginBottom="40">
-              {about.technical.categories.map((category) => (
-                <Column key={category.name} fillWidth gap="4">
-                  <Text variant="heading-strong-l">{category.name}</Text>
-
-                  <Text
-                    as={'li'}
-                    variant="heading-default-xs"
-                    onBackground="neutral-weak"
-                  >
-                    {category.items.join(', ')}
-                  </Text>
-                </Column>
-              ))}
-            </Column>
-          </>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
 
           {about.certifications.display && (
             <>

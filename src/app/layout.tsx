@@ -26,6 +26,7 @@ export default function RootLayout({
     <Flex
       as="html"
       data-neutral={style.neutral}
+      data-brand={style.brand}
       data-solid={style.solid}
       data-border={style.border}
       data-surface={style.surface}
