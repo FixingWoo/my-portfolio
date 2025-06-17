@@ -37,7 +37,7 @@ export const about = {
       {
         company: '(주)BD',
         period: '2021 - 현재',
-        role: 'Front-end Enginner',
+        role: 'Front-end Enginner / AX개발팀',
         achievements: [
           'React, Vue - 재사용 가능한 공통 함수/유틸리티 모듈 구현',
           'Storybook 기반 문서화',
@@ -54,6 +54,14 @@ export const about = {
           '픽업/배송 주문 서비스 "아사삭 스토어 어드민" 개발',
           '공통 함수 및 유틸리티 모듈 구현',
         ],
+      },
+    ],
+  },
+  projects: {
+    title: '프로젝트',
+    items: [
+      {
+        name: '',
       },
     ],
   },
@@ -107,6 +115,17 @@ export const about = {
       {
         name: 'Collaboration / Design',
         items: ['Atlassian', 'Slack', 'Figma'],
+      },
+    ],
+  },
+  certifications: {
+    display: true,
+    title: '자격증',
+    items: [
+      {
+        name: 'Microsoft Azure AI 설계 및 구현 (AI-102)',
+        institution: 'Microsoft',
+        date: '2025.05',
       },
     ],
   },

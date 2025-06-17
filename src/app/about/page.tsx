@@ -40,6 +40,10 @@ export default function About() {
       title: about.technical.title,
       items: about.technical.categories.map((skill) => skill.name),
     },
+    {
+      title: about.certifications.title,
+      items: about.certifications.items.map((item) => item.name),
+    },
   ];
 
   return (
@@ -167,7 +171,7 @@ export default function About() {
                   >
                     {experience.role}
                   </Text>
-                  <Column as={'ul'} gap="16">
+                  <Column as={'ul'} gap="8">
                     {experience.achievements.map((achievement, index) => (
                       <Text
                         as={'li'}
@@ -194,7 +198,7 @@ export default function About() {
             </Heading>
             <Column fillWidth gap="l" marginBottom="40">
               {about.studies.institutions.map((institution) => (
-                <Column key={`${institution.name}`} fillWidth>
+                <Column key={institution.name} fillWidth>
                   <Flex
                     fillWidth
                     vertical="end"
@@ -248,6 +252,46 @@ export default function About() {
               ))}
             </Column>
           </>
+
+          {about.certifications.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.certifications.title}
+                marginBottom="m"
+                variant="display-strong-m"
+              >
+                {about.certifications.title}
+              </Heading>
+
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.certifications.items.map((item) => (
+                  <Column key={item.name} fillWidth>
+                    <Flex
+                      fillWidth
+                      vertical="end"
+                      horizontal="space-between"
+                      marginBottom="4"
+                    >
+                      <Text variant="heading-strong-l">{item.name}</Text>
+                      <Text
+                        variant="heading-default-xs"
+                        onBackground="neutral-weak"
+                      >
+                        {item.date}
+                      </Text>
+                    </Flex>
+                    <Text
+                      variant="heading-default-s"
+                      onBackground="neutral-weak"
+                    >
+                      {item.institution}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
         </Column>
       </Flex>
     </Column>
