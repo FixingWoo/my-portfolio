@@ -53,7 +53,7 @@ const Anchor: React.FC<IProps> = ({ structure }) => {
             vertical="center"
           >
             <Flex height="1" minWidth="16" background="neutral-strong"></Flex>
-            <Text>{section.title}</Text>
+            <Text wrap="nowrap">{section.title}</Text>
           </Flex>
         </Column>
       ))}
