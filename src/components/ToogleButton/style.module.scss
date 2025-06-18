@@ -55,3 +55,9 @@
 .outline {
   border-color: var(--neutral-alpha-weak);
 }
+
+@media (--s) {
+  .button {
+    gap: var(--static-space-0);
+  }
+}
