@@ -5,7 +5,7 @@ import styles from './style.module.scss';
 
 import Flex from '../Flex';
 import TimeDisplay from '../TimeDisplay';
-import ToggleButton from '../ToogleButton';
+import ToggleButton from '../ToggleButton';
 
 import { routes, person } from '@/resources';
 
